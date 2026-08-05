@@ -8,8 +8,7 @@ A publishable Harness Ops revision:
 - remains small enough to read completely in one ordinary tool call;
 - passes the portable validator from a clean clone;
 - names the evidence and expected effect behind material new doctrine;
-- rejects retain/no-change without current exact-tax owner proof and rejects undelivered local,
-  branch-only, or draft-only interventions as successful closeouts; and
+- rejects undelivered local, branch-only, or draft-only interventions as successful closeouts; and
 - remains a candidate until later representative work supports retain, revise, or remove.
 
 `scripts/validate.sh` checks repository structure, artifact size, Markdown hygiene, private-path

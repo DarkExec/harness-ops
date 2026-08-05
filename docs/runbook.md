@@ -12,8 +12,7 @@
    downstream where applicable, read back the delivered identity, and clean up the branch/worktree.
 
 A local edit, commit, pushed branch, or draft pull request is recoverable progress, not a completed
-harness intervention. A no-change decision must identify the current delivered owner that already
-addresses the exact measured tax.
+harness intervention.
 
 Do not publish raw trajectories or private evidence. Summarize only what is necessary to justify the
 general rule.
