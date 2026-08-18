@@ -56,6 +56,8 @@ if [[ "$old_revision" != "$new_revision" ]]; then
   git -C "$root" merge --quiet --ff-only "$new_revision"
   "$root/scripts/validate.sh" >/dev/null
   status="updated"
+else
+  "$root/scripts/validate.sh" >/dev/null
 fi
 
 revision="$(git -C "$root" rev-parse HEAD)"
