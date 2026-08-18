@@ -76,11 +76,15 @@ Find the earliest failed handoff, not merely the final symptom. Resolve its auth
 
 State one intervention hypothesis: change this owner, and this observable execution tax or failure should fall without weakening outcome, authority, proof, portability, or recovery.
 
+Place the intervention at the first relevant decision and make the preferred next action easy to retrieve and unambiguous to apply. State a falsifiable prediction before qualification; do not optimize wording, quotas, or proxy scores merely to win the observed example.
+
 Prefer repairing, deleting, merging, narrowing, or routing to an existing owner over adding wrappers, compatibility layers, dashboards, skills, orchestration, or documentation.
 
 Implement through the normal target workflow. Prove the artifact at native and claim boundaries. The implementation episode is not a fresh behavioral rerun.
 
 When safe and worthwhile, run a later comparable trajectory with the worker, authority, and external conditions recorded. Decide `retain`, `revise`, or `remove`; state confounds and qualification limits.
+
+Grade natural qualification in sequence: was the intervention available, retrieved, interpreted correctly, acted on, and followed by the predicted effect without new carrying cost? A good outcome, a missing recurrence, or lower aggregate cost alone does not establish that the intervention helped.
 
 Measure outcome, proof, human attention, elapsed and waiting time, retries, compute/token/provider cost, authority incidents, regressions, and ongoing carrying cost separately. Do not average successful artifacts over episode escape or serious safety failure.
 
@@ -139,6 +143,8 @@ The doctrine is helping only when later jobs recover the right owner faster, use
 This doctrine is developed independently from local trajectory evidence. Optional reference material is not a source dependency or instruction hierarchy, and target agents do not adopt it implicitly.
 
 The versioned owner is the public Harness Ops repository. Installed paths and symlinks are distribution bindings, not second source copies. Edit shared doctrine only in an explicitly authorized doctrine task, through validation, review, merge, release identity proof, and representative qualification.
+
+At the start of an explicit harness pass, a managed distribution binding may check for a newer canonical revision and activate it only as a validated fast-forward of a clean checkout. Fail closed on local changes, divergence, or failed validation, and record the exact revision and artifact checksum used. Immutable packaged releases remain pinned until their owner deliberately updates them.
 
 Keep this artifact small enough to read completely in one tool call. Move development history, templates, pilots, qualification state, and detailed procedures to their owning repository documents rather than growing operating doctrine.
 

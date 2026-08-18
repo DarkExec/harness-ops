@@ -15,3 +15,5 @@ A publishable Harness Ops revision:
 leakage, and shell syntax. It cannot prove that a doctrine change improves real trajectories.
 
 Downstream integrations must record the exact upstream revision and artifact checksum they ship.
+A managed refresh must validate the fetched revision before activation, require a clean
+fast-forward, serialize concurrent refreshes, and fail before the harness pass on ambiguity.
