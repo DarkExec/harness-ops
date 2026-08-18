@@ -13,6 +13,7 @@ required=(
   docs/quality.md
   docs/runbook.md
   harness-ops.md
+  scripts/refresh.sh
 )
 
 for path in "${required[@]}"; do
@@ -36,18 +37,20 @@ if grep -RInE \
   '(/srv/(voice|clawruns|dark|harness-ops)|tyc0on/|customer[_ -]?id|account-[0-9]+)' \
   "$root" \
   --exclude-dir=.git \
+  --exclude=.git \
   --exclude=validate.sh
 then
   echo "private or host-specific reference found" >&2
   exit 1
 fi
 
-if grep -RIn $'\r' "$root" --exclude-dir=.git; then
+if grep -RIn $'\r' "$root" --exclude-dir=.git --exclude=.git; then
   echo "CRLF line ending found" >&2
   exit 1
 fi
 
 bash -n "$root/scripts/validate.sh"
+bash -n "$root/scripts/refresh.sh"
 git -C "$root" diff --check
 
 printf 'harness-ops validation passed: %s lines, %s bytes\n' "$lines" "$bytes"

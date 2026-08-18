@@ -18,6 +18,7 @@ service and no target-project memory.
 | Acceptance and proof | `docs/quality.md` |
 | Editing and release | `docs/runbook.md` |
 | Portable structural checks | `scripts/validate.sh` |
+| Managed checkout refresh | `scripts/refresh.sh` |
 
 Private or public evaluation projects may propose changes, but they do not own a second canonical
 copy. Accepted changes enter this repository through review.
@@ -30,7 +31,7 @@ representative trajectory
   -> doctrine pull request
   -> offline validation and review
   -> merged public main
-  -> downstream release pins an exact revision
+  -> managed binding validates and fast-forwards, or a packaged release pins an exact revision
   -> later representative qualification
   -> retain, revise, or remove
 ```
@@ -41,4 +42,7 @@ representative trajectory
 - Credentials, logs, queues, databases, caches, generated state, raw trajectories, and private data
   do not belong here.
 - Structural validation proves artifact integrity, not behavioral improvement.
-- Downstream products pin a revision rather than reading a mutable checkout at runtime.
+- A managed checkout may refresh only at an explicit harness-pass boundary, from clean `main`, by
+  validating the fetched candidate before a fast-forward activation.
+- Packaged or vendored downstream products remain immutable and pin a revision rather than reading
+  a mutable checkout at runtime.

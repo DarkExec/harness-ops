@@ -17,7 +17,7 @@ harness intervention.
 Do not publish raw trajectories or private evidence. Summarize only what is necessary to justify the
 general rule.
 
-## Release and downstream pinning
+## Release and downstream bindings
 
 Merged `main` is canonical. A downstream release records:
 
@@ -25,8 +25,14 @@ Merged `main` is canonical. A downstream release records:
 - the SHA-256 of `harness-ops.md`; and
 - the path at which its installed release exposes the artifact.
 
-Changing a downstream pin requires its normal review and qualification. Do not silently follow
-upstream `main`.
+A managed canonical checkout may run `./scripts/refresh.sh` immediately before an explicit harness
+pass. The refresh fetches `origin/main`, validates the exact fetched candidate in isolation, and
+fast-forwards only a clean local `main`. Local changes, divergence, or failed validation stop the
+pass rather than silently retaining or replacing doctrine. The pass records the activated revision
+and artifact checksum.
+
+Packaged or vendored releases remain pinned. Changing such a pin requires the downstream owner's
+normal review and qualification; they do not silently follow upstream `main`.
 
 ## Rollback
 
