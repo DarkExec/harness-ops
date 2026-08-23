@@ -62,7 +62,23 @@ fi
 
 revision="$(git -C "$root" rev-parse HEAD)"
 checksum="$(sha256sum "$root/harness-ops.md" | cut -d' ' -f1)"
-pass_checksum="$({ find "$root/passes" -type f -print0 | sort -z | xargs -0 sha256sum; } | sha256sum | cut -d' ' -f1)"
+pass_checksum="$(python3 - "$root/passes" <<'PY'
+import hashlib
+from pathlib import Path
+import sys
+
+root = Path(sys.argv[1])
+value = hashlib.sha256()
+for path in sorted(item for item in root.rglob("*") if item.is_file()):
+    relative = path.relative_to(root).as_posix().encode()
+    content = path.read_bytes()
+    value.update(len(relative).to_bytes(8, "big"))
+    value.update(relative)
+    value.update(len(content).to_bytes(8, "big"))
+    value.update(content)
+print(value.hexdigest())
+PY
+)"
 if $json; then
   printf '{"status":"%s","revision":"%s","harnessOpsSha256":"%s","passBundleSha256":"%s"}\n' \
     "$status" "$revision" "$checksum" "$pass_checksum"
