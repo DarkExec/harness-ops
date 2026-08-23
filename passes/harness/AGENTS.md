@@ -1,25 +1,31 @@
 # Harness Pass
 
-Review one completed ordinary-engineering trajectory and turn its highest-leverage avoidable cost into a durable improvement encountered by future ordinary agents.
+Review completed ordinary engineering and make at most one durable improvement to a comparable
+future ordinary path.
 
 ## Start here
 
-- Use the target's compact trajectory and cost receipt first.
-- Start at the target's ordinary agent map, resolve the owner of the selected cost, and load only the context needed to place and prove the improvement.
-- Route to `DOCTRINE.md` for an unresolved placement, carrying-cost, or artifact decision and `PLAYBOOK.md` for an unresolved intervention step.
+1. Run `toolburn pass current`. Treat its content-free receipt as a selector, not a score.
+2. Read the target root `AGENTS.md`. If present, read `docs/passes/harness/AGENTS.md` only as the
+   target-local ownership, validation, and delivery overlay.
+3. Expand raw trajectory evidence only around one plausible cost. Route to `DOCTRINE.md` for an
+   unresolved placement or worth decision and `PLAYBOOK.md` for an unresolved operating step.
 
 ## Working loop
 
-1. Select the most consequential cost the completed trajectory actually encountered and establish why it is likely to recur or important enough to prevent.
-2. Locate the earliest authoritative code, command, default, error, test, map, or runbook that a comparable ordinary agent encounters before paying that cost.
-3. Prefer the smallest change that makes the efficient path natural with low carrying cost. Guidance counts as prevention only when ordinary execution routes through it before the failure.
-4. Place the improvement once in that owner. Use a pass artifact only when it has a specific unresolved decision, natural retrieval trigger, and no cheaper execution owner.
-5. Run focused proof and required validation, deliver through the owning workflow, and report the cost, intervention, encounter point, expected benefit, and uncertainty.
-
-An evidence-backed no-op is the right result when the current ordinary path already prevents the cost, the event is genuinely isolated, or no credible intervention clears the worth gate.
+1. Rank direct evidence before aggregate cost: failed outcome, safety or authority failure;
+   explicit correction or rework; repeated retry or reconstruction; then telemetry volume.
+2. Select the most consequential credible recurring cost and locate the earliest authoritative
+   code, command, default, error, test, map, or runbook encountered before it.
+3. Repair an existing failed or noisy interface before adding an adapter. Add an adapter only when
+   it replaces recurring reconstruction and is cheaper to use and carry than the work it removes.
+4. Make the smallest coherent owner change. Do not encode incident-shaped prohibitions, optimize a
+   proxy metric, weaken proof, or add prose a capable agent would not naturally encounter.
+5. Run focused proof and required target validation, deliver through the normal workflow, and read
+   back the delivered identity. Otherwise return a concise evidence-backed no-op.
 
 ## Ownership and qualification
 
-The ordinary target owns implementation and proof; the independent evaluation owner owns comparative and realized-efficiency conclusions. Harness work uses completed product evidence and qualifies through later natural exposure.
-
-Git history carries delivery evidence. Resolve a prior `retain`, `revise`, or `remove` decision when the selected trajectory naturally encounters that intervention.
+The target owns implementation and proof. ToolBurn owns factual session and operation receipts.
+Independent evaluation owns comparative ratings and causal conclusions. Name the expected future
+encounter point and leave later natural exposure to decide `retain`, `revise`, or `remove`.

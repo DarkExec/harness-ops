@@ -12,7 +12,7 @@ Prefer placement in this order: executable behavior; deterministic validation or
 
 ## 2. Preserve ordinary focus
 
-Ordinary agents should not need to read pass methodology. Move accepted knowledge into the ordinary owner's code, tests, defaults, errors, maps, or procedures. Keep pass-specific reasoning in `docs/passes/` and out of ordinary mandatory context.
+Ordinary agents should not need to read pass methodology. Move accepted knowledge into the ordinary owner's code, tests, defaults, errors, maps, or procedures. Keep shared pass-specific reasoning in this released bundle and target-specific routing in a small target overlay, outside ordinary mandatory context.
 
 Do not continue or replay the product job merely to create evidence. Do not use a harness pass to repair a newly discovered product defect unless the current request explicitly authorizes that work.
 

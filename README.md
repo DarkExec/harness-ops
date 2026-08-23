@@ -6,9 +6,9 @@ The canonical artifact is [`harness-ops.md`](harness-ops.md). It tells a capable
 recover intent, find the right owner, respect authority, execute the whole job, prove the actual
 claim, improve a target harness from evidence, and stop.
 
-Harness Ops is deliberately implementation-neutral. Target repositories retain their own code,
-tools, tests, runbooks, proof, and operational memory; they must not depend on this repository being
-present at runtime.
+The doctrine is deliberately implementation-neutral. The same release includes shared Harness and
+Efficiency pass maps, while target repositories retain their own code, tests, runbooks, proof,
+operational memory, and optional small ownership overlays.
 
 ## Use
 
@@ -18,11 +18,16 @@ Ask an agent to read the doctrine before substantial work:
 Read harness-ops.md completely, then work inside the repository that owns the outcome.
 ```
 
-For a session wind-up:
+For a session wind-up with the managed installation:
 
 ```text
-Let's do a harness pass where we take a look at this session and turn trial and error into fast,
-reliable, and durable execution. Make sure we are following harness-ops.md doctrine.
+After reading /srv/harness-ops.md, follow /srv/harness-ops/passes/harness/AGENTS.md. Review all ordinary turns since the previous Harness pass and make the single highest-leverage durable improvement to comparable future ordinary execution. Prefer a small earliest-owner change encountered before the observed cost. Return a concise no-op only when evidence shows the existing path already prevents the cost or no credible small intervention exists.
+```
+
+For an Efficiency pass:
+
+```text
+Review the immediately preceding Harness pass following /srv/harness-ops/passes/efficiency/AGENTS.md.
 ```
 
 Clone and validate:
@@ -36,6 +41,7 @@ cd harness-ops
 ## Repository map
 
 - [`harness-ops.md`](harness-ops.md) — canonical doctrine
+- [`passes/`](passes/) — released Harness and Efficiency execution maps
 - [`ARCHITECTURE.md`](ARCHITECTURE.md) — ownership and publication flow
 - [`docs/quality.md`](docs/quality.md) — acceptance and proof
 - [`docs/runbook.md`](docs/runbook.md) — contribution and release procedure
@@ -43,9 +49,9 @@ cd harness-ops
 
 ## Relationship to DarkExec
 
-[DarkExec](https://github.com/DarkExec/darkexec) distributes an exact, checksummed Harness Ops
-snapshot with each release. This repository remains the upstream doctrine owner; a DarkExec release
-does not depend on a mutable checkout of this repository.
+[DarkExec](https://github.com/DarkExec/darkexec) can bind to an exact, checksummed Harness Ops
+release containing both doctrine and pass maps. Managed installations refresh only at an explicit
+pass boundary; packaged releases pin an immutable revision.
 
 ## Licence
 

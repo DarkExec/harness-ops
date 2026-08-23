@@ -30,4 +30,4 @@ Efficiency, evaluation, repair, and control work must not recursively qualify as
 
 Deterministic validation proves the mechanism and delivery identity. Later qualification must show that a comparable harness agent encountered the change, used it, reduced the targeted cost, and did not weaken ordinary outcomes, authority, proof, portability, or recovery.
 
-Record active surfaces added, merged, removed, or moved to evidence. Delete unsuccessful, superseded, or unencountered guidance rather than preserving every optimization hypothesis. Promote genuinely cross-project principles to the shared passes source only after corroboration; keep project-specific learning with its owner.
+Record active surfaces added, merged, removed, or moved to evidence. Delete unsuccessful, superseded, or unencountered guidance rather than preserving every optimization hypothesis. Promote genuinely cross-project principles to this shared bundle only after corroboration; keep project-specific learning with its owner.
