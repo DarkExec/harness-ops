@@ -26,12 +26,7 @@ Merged `main` is canonical. A downstream release records:
 - the SHA-256 of the released `passes/` bundle; and
 - the path at which its installed release exposes the doctrine and pass maps.
 
-A managed canonical checkout may run `./scripts/refresh.sh` immediately before an explicit harness
-pass. The refresh fetches `origin/main`, validates the exact fetched doctrine and pass candidate in isolation, and
-fast-forwards only a clean local `main`. Local changes, divergence, or failed validation stop the
-pass rather than silently retaining or replacing doctrine. The pass records the activated revision
-and both artifact checksums. The binding also verifies that a compatible ToolBurn CLI is available
-before dispatching a shared pass.
+A human-managed canonical checkout may run `./scripts/refresh.sh`; it fetches `origin/main`, validates the exact fetched doctrine and pass candidate in isolation, and fast-forwards only clean local `main`. A runtime-managed distribution instead stores commit-addressed immutable releases outside the development checkout, requires the active trusted revision to be an ancestor of the fetched candidate, validates before atomically selecting it, retains bounded rollback, and records the activated revision plus both artifact checksums. Local changes, divergence, failed validation, or an ambiguous receipt stop the explicit harness pass rather than silently retaining or replacing doctrine. The binding also verifies that a compatible ToolBurn CLI is available before dispatching a shared pass.
 
 Packaged or vendored releases remain pinned. Changing such a pin requires the downstream owner's
 normal review and qualification; they do not silently follow upstream `main`.

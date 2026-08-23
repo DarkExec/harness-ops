@@ -18,5 +18,4 @@ trajectories.
 
 Downstream integrations must record the exact upstream revision, doctrine checksum, and pass-bundle
 checksum they ship, and must provide the compatible ToolBurn CLI before invoking a shared pass.
-A managed refresh must validate the fetched revision before activation, require a clean
-fast-forward, serialize concurrent refreshes, and fail before the harness pass on ambiguity.
+A managed refresh must validate the fetched revision before activation, require a fast-forward from the active trusted revision, serialize concurrent refreshes, atomically select an immutable release, preserve bounded rollback, and fail before the harness pass on ambiguity. Runtime distribution state must not mutate a human development checkout.
