@@ -3,6 +3,8 @@
 Read `harness-ops.md` completely before changing this repository.
 
 - `harness-ops.md` is the one canonical doctrine artifact.
+- `passes/` owns the released default Harness and Efficiency execution maps; ToolBurn owns their
+  factual pass receipts.
 - Keep the doctrine implementation-neutral and safe to read in one tool call.
 - Put ownership in `ARCHITECTURE.md`, acceptance in `docs/quality.md`, and procedures in
   `docs/runbook.md`.

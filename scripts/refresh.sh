@@ -62,9 +62,11 @@ fi
 
 revision="$(git -C "$root" rev-parse HEAD)"
 checksum="$(sha256sum "$root/harness-ops.md" | cut -d' ' -f1)"
+pass_checksum="$({ find "$root/passes" -type f -print0 | sort -z | xargs -0 sha256sum; } | sha256sum | cut -d' ' -f1)"
 if $json; then
-  printf '{"status":"%s","revision":"%s","harnessOpsSha256":"%s"}\n' \
-    "$status" "$revision" "$checksum"
+  printf '{"status":"%s","revision":"%s","harnessOpsSha256":"%s","passBundleSha256":"%s"}\n' \
+    "$status" "$revision" "$checksum" "$pass_checksum"
 else
-  printf 'harness-ops %s: revision=%s sha256=%s\n' "$status" "$revision" "$checksum"
+  printf 'harness-ops %s: revision=%s doctrine_sha256=%s pass_bundle_sha256=%s\n' \
+    "$status" "$revision" "$checksum" "$pass_checksum"
 fi

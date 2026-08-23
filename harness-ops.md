@@ -26,7 +26,9 @@ Memory-bearing roots must be Git-backed or have an explicit durable backup, rest
 
 `AGENTS.md` is a short map: owners, essential routes, invariant rules, and one validation entry point. Architecture owns stable meaning; runbooks own procedures; plans own unfinished execution; code, types, tools, and tests own enforceable contracts. Do not duplicate an owner across prose surfaces.
 
-Keep the doctrine outside the target. Keep the memory inside it.
+Keep the doctrine outside the target. Keep the memory inside it. Released pass maps and measurement
+interfaces may be shared installed tooling; target-specific ownership, validation, delivery, and
+operational knowledge remain with the target.
 
 ## 3. Execute the Whole Job Efficiently
 

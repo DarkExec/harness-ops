@@ -14,6 +14,8 @@ service and no target-project memory.
 | --- | --- |
 | Operating doctrine | `harness-ops.md` |
 | Repository map | `AGENTS.md` |
+| Shared Harness and Efficiency modes | `passes/` |
+| Content-free pass measurement | `ToolBurn` |
 | Stable meaning and boundaries | `ARCHITECTURE.md` |
 | Acceptance and proof | `docs/quality.md` |
 | Editing and release | `docs/runbook.md` |
@@ -38,11 +40,14 @@ representative trajectory
 
 ## Boundaries
 
-- Target repositories own their implementation, local harness, tests, proof, and durable memory.
+- Target repositories own their implementation, local harness, tests, proof, durable memory, and
+  any small pass overlay needed for local ownership, validation, or delivery.
 - Credentials, logs, queues, databases, caches, generated state, raw trajectories, and private data
   do not belong here.
 - Structural validation proves artifact integrity, not behavioral improvement.
 - A managed checkout may refresh only at an explicit harness-pass boundary, from clean `main`, by
   validating the fetched candidate before a fast-forward activation.
+- Shared pass maps travel with the same released revision as the doctrine. They may depend on a
+  separately versioned, read-only measurement CLI, but never on private evaluation state.
 - Packaged or vendored downstream products remain immutable and pin a revision rather than reading
   a mutable checkout at runtime.

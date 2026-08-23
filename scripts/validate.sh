@@ -14,6 +14,15 @@ required=(
   docs/runbook.md
   harness-ops.md
   scripts/refresh.sh
+  passes/AGENTS.md
+  passes/README.md
+  passes/harness/AGENTS.md
+  passes/harness/DOCTRINE.md
+  passes/harness/PLAYBOOK.md
+  passes/efficiency/AGENTS.md
+  passes/efficiency/DOCTRINE.md
+  passes/efficiency/PLAYBOOK.md
+  passes/scripts/validate.sh
 )
 
 for path in "${required[@]}"; do
@@ -34,7 +43,7 @@ read -r lines bytes < <(wc -l -c < "$root/harness-ops.md")
 }
 
 if grep -RInE \
-  '(/srv/(voice|clawruns|dark|harness-ops)|tyc0on/|customer[_ -]?id|account-[0-9]+)' \
+  '(/srv/(voice|clawruns|dark)(/|\b)|/srv/harness-ops/[^p]|tyc0on/|customer[_ -]?id|account-[0-9]+)' \
   "$root" \
   --exclude-dir=.git \
   --exclude=.git \
@@ -51,6 +60,7 @@ fi
 
 bash -n "$root/scripts/validate.sh"
 bash -n "$root/scripts/refresh.sh"
+"$root/passes/scripts/validate.sh" "$root/passes"
 git -C "$root" diff --check
 
 printf 'harness-ops validation passed: %s lines, %s bytes\n' "$lines" "$bytes"

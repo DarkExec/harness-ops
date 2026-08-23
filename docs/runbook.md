@@ -23,13 +23,15 @@ Merged `main` is canonical. A downstream release records:
 
 - the Harness Ops Git revision;
 - the SHA-256 of `harness-ops.md`; and
-- the path at which its installed release exposes the artifact.
+- the SHA-256 of the released `passes/` bundle; and
+- the path at which its installed release exposes the doctrine and pass maps.
 
 A managed canonical checkout may run `./scripts/refresh.sh` immediately before an explicit harness
-pass. The refresh fetches `origin/main`, validates the exact fetched candidate in isolation, and
+pass. The refresh fetches `origin/main`, validates the exact fetched doctrine and pass candidate in isolation, and
 fast-forwards only a clean local `main`. Local changes, divergence, or failed validation stop the
 pass rather than silently retaining or replacing doctrine. The pass records the activated revision
-and artifact checksum.
+and both artifact checksums. The binding also verifies that a compatible ToolBurn CLI is available
+before dispatching a shared pass.
 
 Packaged or vendored releases remain pinned. Changing such a pin requires the downstream owner's
 normal review and qualification; they do not silently follow upstream `main`.
