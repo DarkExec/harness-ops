@@ -8,8 +8,10 @@ future ordinary path.
 1. Run `toolburn pass current`. Treat its content-free receipt as a selector, not a score.
 2. Read the target root `AGENTS.md`. If present, read `docs/passes/harness/AGENTS.md` only as the
    target-local ownership, validation, and delivery overlay.
-3. Expand raw trajectory evidence only around one plausible cost. Route to `DOCTRINE.md` for an
-   unresolved placement or worth decision and `PLAYBOOK.md` for an unresolved operating step.
+3. Use the ordinary turn's final outcome and proof as the initial evidence index, not as unverified
+   truth. Expand raw trajectory evidence only for a named gap, contradiction, or one plausible
+   remaining cost. Route to `DOCTRINE.md` for an unresolved placement or worth decision and
+   `PLAYBOOK.md` for an unresolved operating step.
 
 ## Working loop
 
